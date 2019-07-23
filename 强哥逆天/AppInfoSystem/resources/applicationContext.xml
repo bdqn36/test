@@ -16,7 +16,7 @@
 
 <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-	<property name="url" value="jdbc:mysql://127.0.0.1:3306/smbms?useUnicode=true&amp;characterEncoding=utf-8"/>
+	<property name="url" value="jdbc:mysql://127.0.0.1:3306/appsys?useUnicode=true&amp;characterEncoding=utf-8"/>
 	<property name="username" value="root"/>
 	<property name="password" value="nx22"/>
 </bean> -->
@@ -42,7 +42,7 @@
 	<!-- 配置sql映射文件信息 -->
 	<property name="mapperLocations">
 		<list>
-			<value>classpath:cn/smbms/dao/**/**/*.xml</value>
+			<value>classpath:cn/appsys/dao/**/**/*.xml</value>
 		</list>
 	</property>
 </bean>
@@ -51,14 +51,14 @@
 	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 </bean>
 <!-- 配置Dao 给我这个sqlsession注入赋值,值等于上面这个类  依赖注入-->
-<!-- <bean id="userMapper" class="cn.smbms.dao.user.UserMapperImpl">
+<!-- <bean id="userMapper" class="cn.appsys.dao.user.UserMapperImpl">
     <property name="sqlSession" ref="sqlSessionTemplate" />
 </bean> -->
 
 <import resource="applicationContext-dao.xml"/>
 
 <!-- 配置业务bean并注入dao实例 -->
-<!-- <bean id="userService" class="cn.smbms.service.user.UserServiceImpl">
+<!-- <bean id="userService" class="cn.appsys.service.user.UserServiceImpl">
       <property name="userMapper" ref="userMapper" />
 </bean> -->
 <import resource="applicationContext-service.xml"/>
@@ -71,7 +71,7 @@
 <!-- 或者bean的id=transactionManager 下面的tx不用定义  名字相同自动装配 -->
 
 <!-- 扫描注解 -->
-<context:component-scan base-package="cn.smbms"></context:component-scan>
+<context:component-scan base-package="cn.appsys"></context:component-scan>
 <aop:aspectj-autoproxy />
 
 

@@ -15,17 +15,18 @@
 	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 <!-- 配置业务bean并注入dao实例 -->
-<bean id="userService" class="cn.smbms.service.user.UserServiceImpl">
-      <property name="userMapper" ref="userMapper" />
+<bean id="devUserService" class="cn.appsys.service.devUser.DevUserServiceImpl">
+      <property name="devUserMapper" ref="devUserMapper" />
 </bean>
-<bean id="roleService" class="cn.smbms.service.role.RoleServiceImpl">
+<!-- 
+<bean id="roleService" class="cn.appsys.service.role.RoleServiceImpl">
       <property name="roleMapper" ref="roleMapper" />
 </bean>
-<bean id="providerService" class="cn.smbms.service.provider.ProviderServiceImpl">
+<bean id="providerService" class="cn.appsys.service.provider.ProviderServiceImpl">
       <property name="providerMapper" ref="providerMapper" />
 </bean>
 
-<bean id="billService" class="cn.smbms.service.bill.BillServiceImpl">
+<bean id="billService" class="cn.appsys.service.bill.BillServiceImpl">
       <property name="billMapper" ref="billMapper" />
-</bean>
+</bean> -->
 </beans>

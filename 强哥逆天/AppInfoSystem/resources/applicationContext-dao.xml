@@ -16,18 +16,19 @@
 
 
 <!-- 配置Dao 给我这个sqlsession注入赋值,值等于上面这个类  依赖注入-->
-<bean id="userMapper" class="cn.smbms.dao.user.UserMapperImpl">
+<bean id="devUserMapper" class="cn.appsys.dao.devUser.DevUserMapperImpl">
     <property name="sqlSession" ref="sqlSessionTemplate" />
 </bean>
-<bean id="roleMapper" class="cn.smbms.dao.role.RoleMapperImpl">
+<!--  
+<bean id="roleMapper" class="cn.appsys.dao.role.RoleMapperImpl">
     <property name="sqlSession" ref="sqlSessionTemplate" />
 </bean>
-<bean id="providerMapper" class="cn.smbms.dao.provider.ProviderMapperImpl">
+<bean id="providerMapper" class="cn.appsys.dao.provider.ProviderMapperImpl">
     <property name="sqlSession" ref="sqlSessionTemplate" />
 </bean>
  
-<bean id="billMapper" class="cn.smbms.dao.bill.BillMapperImpl">
+<bean id="billMapper" class="cn.appsys.dao.bill.BillMapperImpl">
     <property name="sqlSession" ref="sqlSessionTemplate" />
-</bean>
+</bean> -->
 
 </beans>
